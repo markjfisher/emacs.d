@@ -28,6 +28,7 @@
 (use-package mjf-shell)
 (use-package mjf-mark-point)
 (use-package mjf-dired)
+(use-package mjf-hideshow)
 
 ;; add additional lisp libs
 (let ((default-directory (mjf-relative-to-home ".emacs.d/personal/mjf/lisp/")))
