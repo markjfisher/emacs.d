@@ -1,4 +1,4 @@
-;;; mjf-multiple-cursors.el --- mjf customizations for
+;;; mjf-multiple-cursors.el --- mjf customizations for multiple-cursors
 
 ;;; Commentary:
 ;;; Requirements:

@@ -1,4 +1,4 @@
-;;; mjf-ido.el --- mjf customizations for
+;;; mjf-ido.el --- mjf customizations for ido
 
 ;;; Commentary:
 ;;; Requirements:

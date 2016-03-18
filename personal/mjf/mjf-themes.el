@@ -1,4 +1,4 @@
-;;; mjf-themes.el --- mjf customizations for
+;;; mjf-themes.el --- mjf customizations for emacs themes
 
 ;;; Commentary:
 ;;; Requirements:

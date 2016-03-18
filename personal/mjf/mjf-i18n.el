@@ -1,4 +1,4 @@
-;;; mjf-i18n.el --- mjf customizations for
+;;; mjf-i18n.el --- mjf customizations for i18n
 
 ;;; Commentary:
 ;;; Requirements:

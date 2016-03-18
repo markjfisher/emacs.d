@@ -1,4 +1,4 @@
-;;; mjf-shell.el --- mjf customizations for
+;;; mjf-shell.el --- mjf customizations for shells
 
 ;;; Commentary:
 ;;; Requirements:

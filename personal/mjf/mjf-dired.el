@@ -1,4 +1,4 @@
-;;; mjf-dired.el --- mjf customizations for
+;;; mjf-dired.el --- mjf customizations for dired
 
 ;;; Commentary:
 ;;; Requirements:

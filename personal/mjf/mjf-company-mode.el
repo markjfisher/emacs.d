@@ -1,4 +1,4 @@
-;;; mjf-company-mode.el --- mjf customizations for
+;;; mjf-company-mode.el --- mjf customizations for company
 
 ;;; Commentary:
 ;;; Requirements:

@@ -1,4 +1,4 @@
-;;; mjf-functions.el --- mjf customizations for
+;;; mjf-functions.el --- mjf custom functions
 
 ;;; Commentary:
 ;;; Requirements:

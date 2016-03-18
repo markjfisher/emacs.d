@@ -1,4 +1,4 @@
-;;; mjf-cider.el --- mjf customizations for
+;;; mjf-cider.el --- mjf customizations for CIDER
 
 ;;; Commentary:
 ;;; Requirements:
@@ -12,7 +12,7 @@
 (setq cider-popup-stacktraces nil)
 (setq cider-repl-popup-stacktraces t)
 (setq nrepl-buffer-name-show-port t)
-(setq cider-repl-history-file "/Users/markf/.cider_history")
+(setq cider-repl-history-file (mjf-relative-to-home ".cider_history"))
 
 
 (provide 'mjf-cider)

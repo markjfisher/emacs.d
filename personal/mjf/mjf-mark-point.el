@@ -1,4 +1,4 @@
-;;; mjf-mark-point.el --- mjf customizations for
+;;; mjf-mark-point.el --- mjf customizations for marking point and jumps
 
 ;;; Commentary:
 

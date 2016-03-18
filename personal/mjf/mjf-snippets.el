@@ -1,6 +1,9 @@
-;;; mjf-snippets.el --- mjf customizations for
+;;; mjf-snippets.el --- mjf customizations for snippets
 
 ;;; Commentary:
+
+;; TODO: Work out how to link the various snippet subdirs
+
 ;;; Requirements:
 
 (require 'yasnippet)

@@ -1,4 +1,4 @@
-;;; mjf-init.el --- Main entry point for mjf configuration.
+;;; mjf-prelude.el --- prelude custom changes
 
 ;;; Commentary:
 ;;; Requirements:

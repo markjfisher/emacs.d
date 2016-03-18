@@ -1,4 +1,4 @@
-;;; mjf-smartparens.el --- mjf customizations for
+;;; mjf-smartparens.el --- mjf customizations for smartparens
 
 ;;; Commentary:
 ;;; Requirements:

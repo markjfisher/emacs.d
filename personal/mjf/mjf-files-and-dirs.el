@@ -1,4 +1,4 @@
-;;; mjf-files-and-dirs.el --- mjf customizations for
+;;; mjf-files-and-dirs.el --- mjf file and dir utils
 
 ;;; Commentary:
 ;;; Requirements:
