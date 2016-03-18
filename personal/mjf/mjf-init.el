@@ -28,7 +28,6 @@
 (use-package mjf-shell)
 (use-package mjf-mark-point)
 (use-package mjf-dired)
-(use-package mjf-hideshow)
 
 ;; add additional lisp libs
 (let ((default-directory (mjf-relative-to-home ".emacs.d/personal/mjf/lisp/")))
@@ -36,6 +35,7 @@
   (normal-top-level-add-subdirs-to-load-path))
 
 (use-package mjf-restclient)
+(use-package mjf-hideshow)
 
 (setq-local figlet-font-path (mjf-relative-to-home "Documents/figlet/fonts"))
 (setq-local figlet-fonts '("big" "defleppard" "doom" "fraktur" "Georgia11"

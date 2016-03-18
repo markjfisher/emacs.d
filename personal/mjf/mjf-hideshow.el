@@ -41,5 +41,10 @@
 (dolist (mode code-editing-mode-hooks)
   (add-hook mode 'hs-minor-mode))
 
+;; Additionally, use the hideshow-org mode
+;; this is copied from https://github.com/occidens/hideshow-org
+(require 'hideshow-org)
+(global-set-key "\C-ch" 'hs-org/minor-mode)
+
 (provide 'mjf-hideshow)
 ;;; mjf-hideshow.el ends here
