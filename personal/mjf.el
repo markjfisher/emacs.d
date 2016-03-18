@@ -11,6 +11,7 @@
    ace-window
    bash-completion
    clojure-snippets
+   command-log-mode
    company-restclient
    csv-mode
    dired+

@@ -14,9 +14,5 @@
 (setq mac-command-modifier 'meta)
 (setq mac-option-modifier 'super)
 
-;; change init file dir
-(setq prelude-user-init-file "/Users/markf/.emacs.mjf.d/")
-
-
 (provide 'mjf-prelude)
 ;;; mjf-prelude.el ends here
