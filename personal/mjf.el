@@ -7,9 +7,10 @@
 
 (prelude-require-packages
  '(ace-jump-buffer
-   ace-jump-mode
+   ;; ace-jump-mode
    ace-window
    bash-completion
+   cider
    clojure-snippets
    command-log-mode
    company-restclient
@@ -24,7 +25,9 @@
    markdown-mode
    multiple-cursors
    org
+   ox-impress-js
    ox-reveal
+   solarized-theme
    restclient
    use-package
    waher-theme

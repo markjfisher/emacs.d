@@ -14,5 +14,9 @@
 (setq mac-command-modifier 'meta)
 (setq mac-option-modifier 'super)
 
+(global-set-key (kbd "C-c j") 'avy-goto-word-or-subword-1)
+(global-set-key (kbd "s-.") 'avy-goto-char)
+(global-set-key (kbd "s-w") 'ace-window)
+
 (provide 'mjf-prelude)
 ;;; mjf-prelude.el ends here

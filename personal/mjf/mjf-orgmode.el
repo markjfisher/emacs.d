@@ -5,6 +5,7 @@
 
 (require 'package)
 (require 'ox-reveal)
+(require 'ox-impress-js)
 (require 'htmlize)
 
 ;;; Code:
