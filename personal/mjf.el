@@ -15,6 +15,7 @@
    command-log-mode
    company-restclient
    csv-mode
+   dash
    dired+
    dired-hacks-utils
    dired-k
@@ -27,6 +28,9 @@
    org
    ox-impress-js
    ox-reveal
+   s
+   slime
+   slime-company
    solarized-theme
    restclient
    use-package

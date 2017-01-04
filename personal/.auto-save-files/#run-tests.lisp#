@@ -1,0 +1,76 @@
+;;;; run-tests.lisp
+
+;;;; Usage:
+;;;; sbcl --load run-tests.lisp
+
+
+;;;; compiling it down to fasl doesn't yet work, get an error:
+
+;; Unhandled SB-KERNEL:SIMPLE-PACKAGE-ERROR in thread #<SB-THREAD:THREAD "main thread" RUNNING
+;;       {1002826D33}>:
+;; Error finding package for symbol "QUICKLOAD":
+;; The name "QUICKLISP-CLIENT" does not designate any package.
+
+;;;; This is an adapted version of cl-git's run-tests.lisp
+;;;; adjusted to work with lisp-unit.
+
+(in-package :common-lisp-user)
+
+(eval-when (:compile-toplevel :load-toplevel :execute)
+  (defun ~ (path)
+    (merge-pathnames path (user-homedir-pathname)))
+
+  (defun load-quicklisp ()
+    (block nil
+      (flet ((try (x) (when (probe-file x) (return (load x)))))
+        (try (~ "quicklisp/setup.lisp"))
+        (try (~ ".quicklisp/setup.lisp"))
+        (error "Can't find an installation of quicklisp."))))
+
+  ;; The following means "only if quicklisp not in *features*"
+  #-quicklisp
+  (load-quicklisp))
+
+(eval-when (:compile-toplevel :load-toplevel :execute)
+  #-lisp-unit
+  (ql:quickload 'lisp-unit)
+  #-unixoptions
+  (ql:quickload 'unix-options))
+
+;; put's CWD into asdf's registry so it can find polynomial.asd and define local systems
+(push (truename #p"./") asdf:*central-registry*)
+(asdf:system-depends-on (asdf:find-system "polynomial"))
+(ql:quickload "polynomial" :verbose t)
+(asdf:system-depends-on (asdf:find-system "polynomial/tests"))
+(ql:quickload "polynomial/tests" :verbose t)
+
+(defun safe-trace (sym package)
+  (handler-bind ((simple-error
+                  #'(lambda (c)
+                      (declare (ignore c))
+                      (format t "Skipping Symbol (probably a macro)~%")
+                      (invoke-restart 'skip-symbol))))
+    (when (and (fboundp sym)
+               (functionp (symbol-function sym))
+                                        ;(not (macrop sym))
+               (equal (package-name (symbol-package sym))
+                      package))
+      (format t "Trying to trace Symbol ~A~%" sym)
+      (restart-case
+          (eval `(trace ,(intern (symbol-name sym) package)))
+        (skip-symbol () nil)))))
+
+(unix-options:with-cli-options (uiop:*command-line-arguments*)
+  (help trace)
+  (when help
+    (unix-options:print-usage-summary
+     "Usage:~%~@{~A~%~}"
+     '(((#\t "trace") nil "trace the functions during a test run.")))
+    (uiop::quit :unix-status 1))
+  (when trace
+    (do-symbols (sym 'polynomial)
+      (safe-trace sym "POLYNOMIAL"))))
+
+<(setq lisp-unit:*print-failures* t)
+(lisp-unit:run-tests :all :polynomial-tests)
+(uiop:quit 0)
