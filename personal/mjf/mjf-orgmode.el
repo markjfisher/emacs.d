@@ -15,12 +15,12 @@
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
 
 (setq org-export-htmlize-output-type 'css)
-(setq org-reveal-root "file:///Users/markf/dev/github/reveal.js")
+(setq org-reveal-root "file:///Users/mark.fisher/dev/github/reveal.js")
 
-(setq markdown-css-dir "/Users/markf/.emacs.d/personal/css/")
+(setq markdown-css-dir "/Users/mark.fisher/.emacs.d/personal/css/")
 (setq markdown-css-theme "github-rhio")
 ;; (setq markdown-command-needs-filename 't)
-(setq markdown-command "/Users/markf/bin/grip-run.sh")
+(setq markdown-command "/Users/mark.fisher/bin/grip-run.sh")
 
 (defadvice org-html-src-block
     (after toby/wrap-org-html-src-in-code-tag activate)

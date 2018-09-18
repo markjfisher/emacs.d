@@ -5,6 +5,8 @@
  ;; If there is more than one, they won't work right.
  '(ansi-color-names-vector
    ["#3F3F3F" "#CC9393" "#7F9F7F" "#F0DFAF" "#8CD0D3" "#DC8CC3" "#93E0E3" "#DCDCCC"])
+ '(company-quickhelp-color-background "#4F4F4F")
+ '(company-quickhelp-color-foreground "#DCDCCC")
  '(custom-safe-themes
    (quote
     ("7b4d9b8a6ada8e24ac9eecd057093b0572d7008dbd912328231d0cada776065a" default)))
@@ -14,7 +16,7 @@
     ("#CC9393" "#DFAF8F" "#F0DFAF" "#7F9F7F" "#BFEBBF" "#93E0E3" "#94BFF3" "#DC8CC3")))
  '(package-selected-packages
    (quote
-    (slime-company package-build shut-up git commander f slime s yaml-mode waher-theme use-package solarized-theme ox-reveal ox-impress-js multiple-cursors markdown-mode htmlize groovy-mode dired-subtree dired-k dired-hacks-utils dired+ csv-mode company-restclient command-log-mode clojure-snippets bash-completion ace-jump-buffer geiser rainbow-mode elisp-slime-nav cider clojure-mode rainbow-delimiters key-chord company smex ido-ubiquitous flx-ido vkill exec-path-from-shell zop-to-char zenburn-theme which-key volatile-highlights undo-tree smartrep smartparens smart-mode-line operate-on-number move-text magit projectile ov imenu-anywhere guru-mode grizzl god-mode gitignore-mode gitconfig-mode git-timemachine gist flycheck expand-region epl easy-kill diminish diff-hl discover-my-major dash crux browse-kill-ring beacon anzu ace-window)))
+    (php-mode slime-company package-build shut-up git commander f slime s yaml-mode waher-theme use-package solarized-theme ox-reveal ox-impress-js multiple-cursors markdown-mode htmlize groovy-mode dired-subtree dired-k dired-hacks-utils dired+ csv-mode company-restclient command-log-mode clojure-snippets bash-completion ace-jump-buffer geiser rainbow-mode elisp-slime-nav cider clojure-mode rainbow-delimiters key-chord company smex ido-ubiquitous flx-ido vkill exec-path-from-shell zop-to-char zenburn-theme which-key volatile-highlights undo-tree smartrep smartparens smart-mode-line operate-on-number move-text magit projectile ov imenu-anywhere guru-mode grizzl god-mode gitignore-mode gitconfig-mode git-timemachine gist flycheck expand-region epl easy-kill diminish diff-hl discover-my-major dash crux browse-kill-ring beacon anzu ace-window)))
  '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838")))
  '(vc-annotate-background "#2B2B2B")
  '(vc-annotate-color-map

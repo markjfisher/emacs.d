@@ -17,7 +17,7 @@
 (use-package mjf-i18n)
 (use-package mjf-prelude)
 (use-package mjf-company-mode)
-(use-package mjf-orgmode)
+;;; (use-package mjf-orgmode)
 (use-package mjf-themes)
 (use-package mjf-files-and-dirs)
 (use-package mjf-multiple-cursors)
